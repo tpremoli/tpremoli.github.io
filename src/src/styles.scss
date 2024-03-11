@@ -11,10 +11,22 @@ $family-sans-serif: "Lato", sans-serif;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
+.image-custom-size {
+    img {
+        width: 300px; // Set your desired width
+        height: 300px; // Maintain aspect ratio
+        border-radius: 50%; // Keeps the image rounded
+    }
+}
+
 // More theme colors could be added here...
 $primary: #454545;
 
-$spaces: ("0": 0, "1": 1.65rem, "2": 1.75rem);
+$spaces: (
+    "0": 0,
+    "1": 1.65rem,
+    "2": 1.75rem
+);
 
 $margin-default: map-get($spaces, "2") map-get($spaces, "0");
 
@@ -23,23 +35,37 @@ $footer-padding: 3rem 1.5rem;
 $link: hsl(171, 100%, 41%);
 
 // Custom Styles
-.card-gap {margin-top:1.75rem}
-.modal-trigger { cursor: pointer; }
-a.icon > strong {margin-left:.25rem}
-.modal-card-body div.content {margin:$margin-default}
+.card-gap {
+    margin-top: 1.75rem
+}
+
+.modal-trigger {
+    cursor: pointer;
+}
+
+a.icon>strong {
+    margin-left: .25rem
+}
+
+.modal-card-body div.content {
+    margin: $margin-default
+}
 
 // import everything - alternatively import just what you need: https://bulma.io/documentation/overview/modular/
-@import "~bulma/bulma"; 
+@import "~bulma/bulma";
 
 // override specific bulma styles
-.section {padding: 2.15rem 1.5rem}
+.section {
+    padding: 2.15rem 1.5rem
+}
 
 @function theme-color($key: "primary") {
     @return map-get($theme-colors, $key);
 }
 
 // Flickity - begin
-.carousel-cell {width:100%}
-// Flickity - end
+.carousel-cell {
+    width: 100%
+}
 
- 
+// Flickity - end
